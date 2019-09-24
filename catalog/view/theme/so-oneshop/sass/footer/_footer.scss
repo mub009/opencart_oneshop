@@ -1,0 +1,22 @@
+
+footer #collapse-footer{
+	display: block;
+}
+.footer-container{
+	clear: both;
+}
+footer .so-page-builder .container{
+    padding: 0 15px;
+}
+footer .copyright a{
+	color: $linkColor !important;
+}
+
+.typefooter-1 .footer-toplinks ul li a:hover,
+.typefooter-1 .box-account .modcontent ul li a:hover{
+	color: $linkColor;
+}
+.typefooter-1 .box-account .modcontent ul li a:hover:before,
+.typefooter-1 ul.socials li a:hover{
+	background-color: $background;
+}

@@ -1,0 +1,215 @@
+
+//** simple and lightweight mixin library for Sass **
+//-- url : http://bourbon.io/docs ---
+@import 'bourbon/bourbon';
+
+//** Mixins for Rem Font Sizing **
+//-- url : http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+@import 'utilities/rem';
+
+//** Variables for responsive design in bootstrap with sass **
+//-- url : https://gist.github.com/webinfinita/11407836
+@import 'utilities/bootstrap_breakpoints';
+
+//** Makes supporting both left-to-right (LTR) and right-to-left (RTL) easy.**
+//-- url : https://github.com/tysonmatanich/directional-scss
+@import 'utilities/directional';
+
+//Mixins utilities
+@import 'utilities/theme_variables';
+@import 'utilities/utilities';
+
+/* ================================================================================ */
+
+.typefooter-1{
+	margin-top: 0px;
+	padding-top: 40px;
+	background-color: #212121;
+	color: #ccc;
+	font-size: 14px;
+	
+	/* GENERAL */
+	.module .modtitle{
+       	color: #fff;
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 20px !important;  
+        font-weight: 700;
+        text-transform: capitalize;           
+	}
+	.box-account{
+			
+		.modcontent{
+			ul{
+				li{		        		          
+		          a{
+		            border: 0 none;		            
+		            padding: 0;		    
+		            font-weight: 400; 
+		            line-height: 30px; 
+		            position: relative;
+		            color: #ccc;
+		            padding-#{$left}: 10px;
+		            &:before{
+		            	position: absolute;
+		            	content: "";
+		            	width: 4px;
+		            	height: 4px;
+		            	border-radius: 100%;
+		            	top: 7px;
+		            	#{$left}: 0;
+		            	background-color: #ccc;
+		            } 
+		          }		    
+		        }
+			}
+		}		
+	}
+	.box-account,
+	.box-community{
+		margin-top: 10px;
+		.module2{
+			margin-top: 45px;
+		}
+	}
+	.box-contact {
+		p{
+			margin-top: 13px;
+		}	
+		.infos{
+			li{
+				margin-bottom: 10px;
+			}
+		}
+		
+	}
+	ul.socials{
+        li{
+            float: $left;
+            margin-#{$right}: 10px;
+          a{
+              background-color: #525252;
+              color: #fff;
+              display: inline-block;
+              font-size: 14px !important;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              width: 40px;
+              border-radius: 3px;
+              @include transition(all 0.2s ease-in-out 0s);
+              &:hover{
+                color: #fff;
+              }
+          }
+        }
+    }
+    .apps{
+    	li{
+    		display: inline-block;
+    		&:first-child{
+    			padding-#{$right}: 15px;
+    		}
+    	}
+    }
+    .infos{
+    	li{
+    		i{
+    			width: 25px;
+    		}
+    	}
+    }
+    .footer-toplinks{
+    	font-size: 12px;
+    	border-top: 2px solid #383838;
+    	border-bottom: 2px solid #383838;
+    	margin-top: 40px;
+    	padding-top: 35px;
+    	line-height: 100%;
+    	padding-bottom: 23px;
+    	.links{
+    		display: inline-block;
+    		width: 100%;
+    		margin-bottom: 15px;
+    		label{
+    			float: $left;
+    			margin-bottom: 0;
+    		}
+    	}
+    	ul{
+    		li{
+    			float: $left;
+    			position: relative;
+    			display: inline-block;
+    			padding: 0 5px;
+    			&:after {
+				    color: #ccc;
+				    content: "/";
+				    display: block;
+				    font-size: 12px;
+				    position: absolute;
+				    right: -2px;
+				    top: 0;
+				}
+    			a{
+    				color: #ccc;
+    				
+    			}
+    			&:last-child{
+    				&:after {
+    					display: none;
+    				}
+    			}
+    		}
+    	}
+    }
+	.footer-top{
+
+	}
+	.footer-middle{
+		border-top: 1px solid #ddd;
+		text-align: center;
+		margin-top: 40px;
+		padding-top: 26px;
+		.footer-links{
+			li{
+				display: inline-block;
+				a{
+					color: #000;
+					text-transform: uppercase;
+					font-size: 12px;
+					border-#{$right}: 1px solid #646464;
+					line-height: 100%;
+					padding: 0 15px;
+				}
+				&:last-child{
+					a{
+						border-#{$right}: none;
+					}
+				}
+			}
+		}
+		.security{
+			margin-bottom: 25px;
+		}
+		p{
+			margin-top: 20px;
+			margin-bottom: 28px;
+			padding: 0 10%;
+		}
+	}
+	/* FOOTER BOTTOM */
+	
+	.payment-w{
+		img{
+			float: $right;
+		}
+	}
+	.footer-bottom{
+		padding: 16px 0;
+	    .copyright{
+	        font-size: 12px;
+	        margin-top: 4px;
+	    }
+	}
+}

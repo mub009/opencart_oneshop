@@ -1,0 +1,281 @@
+2019-09-24 4:37:54 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+2019-09-24 4:41:16 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+2019-09-24 4:45:35 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Bug Fixing OC-3.x
+
+FILE: catalog/controller/information/contact.php
+CODE: $this->load->language('information/contact')
+LINE: 8
+LINE: 175
+----------------------------------------------------------------
+MOD: OCMod Editor
+
+FILE: admin/controller/marketplace/modification.php
+CODE: $data['refresh'] = $this->url->link('marketplace/modification/refresh', 'user_token=' . $this->session->data['user_token'] . $url, true);
+LINE: 657
+CODE: $data['modifications'][] = array(
+LINE: 679
+CODE: $data['tab_log'] = $this->language->get('tab_log');
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/marketplace/modification.twig
+CODE: <div class="pull-right">
+LINE: 5
+CODE: {% if not modification.enabled %}
+LINE: 96
+----------------------------------------------------------------
+MOD: Simple Blog
+
+FILE: admin/controller/common/column_left.php
+CODE: $report = array();
+LINE: 705
+
+FILE: admin/language/ar-ar/common/column_left.php
+CODE: $_['text_other_status']
+LINE: 104
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_other_status']
+LINE: 100
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: if ($query->row['query'] && $url[0] != 'information_id' && $url[0] != 'manufacturer_id' && $url[0] != 'category_id' && $url[0] != 'product_id') {
+LINE: 43
+CODE: if ($url[0] == 'category_id') {
+LINE: 38
+CODE: $this->request->get['route'] = 'error/not_found'
+LINE: 60
+CODE: $this->request->get['route'] = 'information/information';
+LINE: 83
+CODE: } elseif ($key == 'path') {
+LINE: 124
+
+FILE: catalog/controller/common/header.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: So OnePage Checkout
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: class ControllerCheckoutCheckout extends Controller {
+LINE: 1130
+CODE: $data['breadcrumbs'] = array();
+LINE: 1181
+CODE: $this->response->setOutput($this->load->view('checkout/checkout', $data));
+LINE: 1546
+CODE: $this->response->setOutput($this->load->view('checkout/checkout', $data));
+LINE: 1546
+----------------------------------------------------------------
+MOD: So Social Login
+
+FILE: catalog/view/theme/default/template/account/login.twig
+CODE: <div class="well">
+LINE: 24
+LINE: 31
+CODE: <input type="submit" value="{{ button_login }}" class="btn btn-primary" />
+LINE: 47
+CODE: </form>
+LINE: 118
+CODE: {{ footer }}
+LINE: 141
+
+FILE: catalog/view/theme/so-oneshop/template/account/login.twig
+CODE: <div class="well">
+LINE: 31
+CODE: <input type="submit" value="{{ button_login }}" class="btn btn-primary" />
+LINE: 45
+CODE: </form>
+LINE: 116
+CODE: {{ footer }}
+LINE: 139
+
+FILE: catalog/controller/account/login.php
+CODE: $data['header'] = $this->load->controller('common/header');
+LINE: 258
+CODE: $data['title'] = $this->document->getTitle();
+LINE: 139
+
+FILE: catalog/view/theme/default/template/common/header.twig
+CODE: <div id="socialLogin"></div>
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/view/theme/so-oneshop/template/common/header.twig
+CODE: <div id="socialLogin"></div>
+LINE: 252
+----------------------------------------------------------------
+MOD: So ThemeConfig
+
+FILE: catalog/controller/common/language.php
+CODE: $data['languages'] = array();
+LINE: 17
+
+FILE: catalog/controller/common/cart.php
+CODE: public function index()
+LINE: 7
+CODE: public function index()
+LINE: 46
+
+FILE: catalog/controller/common/footer.php
+CODE: public function index()
+LINE: 46
+
+FILE: catalog/controller/common/home.php
+CODE: $data['header'] = $this->load->controller('common/header');
+LINE: 20
+CODE: public function index()
+LINE: 5
+
+FILE: catalog/controller/product/search.php
+CODE: public function index()
+LINE: 11
+CODE: $data['products'][] = array(
+LINE: 253
+CODE: $data['products'][] = array
+LINE: 257
+
+FILE: catalog/controller/product/special.php
+CODE: public function index()
+LINE: 11
+CODE: $data['products'][] = array(
+LINE: 143
+CODE: $data['products'][] = array
+LINE: 147
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: public function index()
+LINE: 11
+CODE: $data['products'][] = array(
+LINE: 216
+CODE: $data['products'][] = array
+LINE: 220
+
+FILE: catalog/controller/product/category.php
+CODE: public function index()
+LINE: 11
+CODE: $data['products'][] = array(
+LINE: 225
+CODE: $data['products'][] = array
+LINE: 229
+CODE: $data['categories'][]
+LINE: 156
+CODE: $data['categories'][]
+LINE: 157
+CODE: public function info()
+LINE: 74
+
+FILE: catalog/controller/product/product.php
+CODE: public function index()
+LINE: 16
+CODE: $this->document->addScript('catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js');
+LINE: 232
+CODE: $this->document->addStyle('catalog/view/javascript/jquery/magnific/magnific-popup.css');
+LINE: 236
+CODE: $data['options'] = array();
+LINE: 337
+CODE: $data['products'][] = array(
+LINE: 453
+CODE: $data['products'][] = array
+LINE: 456
+
+FILE: system/engine/router.php
+CODE: while ($action instanceof Action)
+LINE: 59
+
+FILE: admin/controller/design/layout.php
+CODE: public function index()
+LINE: 5
+CODE: design/layout_form
+LINE: 403
+CODE: design/layout_form
+LINE: 403
+CODE: $design = array();
+LINE: 302
+----------------------------------------------------------------
+MOD: So Tools
+CODE: $this->load->model('catalog/manufacturer');
+LINE: 99
+----------------------------------------------------------------
